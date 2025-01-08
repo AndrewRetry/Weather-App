@@ -1,0 +1,295 @@
+body, h2, h4, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background: linear-gradient(135deg, #89CFF0, #034694);
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-content: center;
+    height: 600px;
+}
+
+.header {
+    margin-bottom: 5%;
+}
+
+#mainHeader {
+    font-size: 4.5rem;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+#subHeader{
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #d9ecf2;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #d9ecf2;
+    opacity: 0.8;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #d9ecf2;
+    color: #ffffff;
+}
+
+button {
+    background: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button img {
+    width: 20px;
+    height: 20px;
+}
+
+button:hover {
+    background: #d9ecf2;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* Card Styles */
+/* General Reset */
+body, h2, h4, input, button, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #89CFF0, #034694);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero {
+    margin-bottom: 30px;
+}
+
+.header {
+    margin-bottom: 10px;
+}
+
+#mainHeader {
+    font-size: 2.8rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+#subHeader {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #d9ecf2;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    flex-grow: 1;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #ffffff;
+    border-radius: 25px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #d9ecf2;
+    opacity: 0.8;
+}
+
+input:focus {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: #d9ecf2;
+    color: #ffffff;
+}
+
+button {
+    background: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+button img {
+    width: 24px;
+    height: 24px;
+}
+
+button:hover {
+    background: #d9ecf2;
+    transform: scale(1.1);
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+/* Card Container */
+.card.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    width: 45%;
+    height: 150px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+.main-statistic {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.secondary-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: #d9ecf2;
+    margin-top: 5px;
+}
+
+/* Location Styling */
+#location {
+    text-align: center;
+    margin-bottom: 30px; /* Separate the location from the cards */
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#city {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#country {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #d9ecf2;
+}

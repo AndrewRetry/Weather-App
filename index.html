@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Forecaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
 </head>
 <body>
     <div class="hero container">
@@ -12,9 +14,54 @@
     </div>
     <div class="content container">
         <div class="searchBar">
-            <input type="text" placeholder="Enter a city (e.g. Atlanta)" 
-            spellcheck="false">
-            <button><img src="resources/search.png"></button>
+            <input type="text" placeholder="Enter a city (e.g. Atlanta)" spellcheck="false" id="searchQuery">
+            <button><img src="resources/search.png" id="searchButton"></button>
+        </div>
+
+        <div class="content container">
+            <!-- Location Section -->
+            <div id="location">
+                <h3 id="city">Kiw</h3>
+                <p id="country">New Zealand</p>
+            </div>        
+    <!-- Cards Section -->
+    <div class="card container">
+        <!-- Temperature Card -->
+        <div class="cards" id="temperature">
+            <div class="card-content">
+                <img src="resources/temperature.png" class="icon" alt="Temperature Icon">
+                <div class="statistic">
+                    <p class="main-statistic" id="temperatureDisplay">28</p>
+                    <p class="secondary-text" id="temperatureFeelDisplay">Feels like 30°C</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Humidity Card -->
+        <div class="cards" id="humidity">
+            <div class="card-content">
+                <img src="resources/humidity.png" class="icon" alt="Humidity Icon">
+                <p class="main-statistic" id="humidityDisplay">45%</p>
+                <p class="secondary-text" id="temperatureFeelDisplay">Humidity</p>
+            </div>
+        </div>
+
+        <!-- Air Quality Index (AQI) Card -->
+        <div class="cards" id="aqi">
+            <div class="card-content">
+                <img src="resources/wind.png" class="icon" alt="Air Quality Icon">
+                <p class="main-statistic" id="aqiDisplay">1</p>
+                <p class="secondary-text" id="temperatureFeelDisplay">Good</p>
+            </div>
+        </div>
+
+        <!-- Weather Card -->
+        <div class="cards" id="weather">
+            <div class="card-content">
+                <img src="resources/weatherIcon/dfewcloud.png" class="icon" alt="Weather Icon">
+                <p class="main-statistic" id="weatherDisplay">Sunny</p>
+                <p class="secondary-text" id="temperatureFeelDisplay">Feels like 30°C</p>
+            </div>
         </div>
     </div>
 </body>

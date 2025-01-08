@@ -38,8 +38,8 @@ function parseInput(input) {
 async function getCoordinates(cityName, countryCode = null) {
     // return array [lat, lon, name]
     const locatorURL = countryCode
-    ? `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)},${countryCode}&limit=1&appid=${APIKEY}`
-    : `http://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&limit=1&appid=${APIKEY}`;
+    ? `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)},${countryCode}&limit=1&appid=${APIKEY}`
+    : `https://api.openweathermap.org/geo/1.0/direct?q=${encodeURIComponent(cityName)}&limit=1&appid=${APIKEY}`;
     try {
         const response = await fetch(locatorURL)
         if (!response.ok) {

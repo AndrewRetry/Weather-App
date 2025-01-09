@@ -1,36 +1,65 @@
-body, h2, h4, input, button {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     background: linear-gradient(135deg, #89CFF0, #034694);
-    color: #FFFFFF;
+    background-size: 400% 400%;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    animation: backgroundFlow 10s infinite;
 }
 
+/* Containers */
 .container {
     width: 100%;
     max-width: 800px;
     text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 20px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.hero{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    align-content: center;
+.inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section */
+.hero {
+    margin: 5% 0;
     height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .header {
@@ -41,20 +70,22 @@ body{
     font-size: 4.5rem;
     font-weight: bold;
     letter-spacing: 1.2px;
+    animation: pulse 2s infinite ease-in-out;
 }
 
-#subHeader{
+#subHeader {
     font-size: 2.5rem;
     font-weight: 300;
     color: #d9ecf2;
 }
 
+/* Search Bar */
 .searchBar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 
 input {
@@ -77,9 +108,11 @@ input::placeholder {
 input:focus {
     background: rgba(255, 255, 255, 0.3);
     border-color: #d9ecf2;
-    color: #ffffff;
+    box-shadow: 0 0 8px rgba(217, 236, 242, 0.8);
+    transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
+/* Buttons */
 button {
     background: #ffffff;
     border: none;
@@ -92,7 +125,7 @@ button {
     align-items: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
 }
 
 button img {
@@ -103,158 +136,20 @@ button img {
 button:hover {
     background: #d9ecf2;
     transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 button:active {
     transform: scale(0.9);
 }
 
-/* Card Styles */
-/* General Reset */
-body, h2, h4, input, button, p {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background: linear-gradient(135deg, #89CFF0, #034694);
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.container {
-    width: 100%;
-    max-width: 600px;
-    text-align: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-}
-
-.outer-container {
-    position: relative; /* Establish a relative positioning context */
-    display: flex; /* Use flexbox to manage children */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    padding: 20px; /* Optional padding for spacing */
-    background: rgba(255, 255, 255, 0.1); /* Example background */
-    border-radius: 12px; /* Optional rounding */
-    width: 100%; /* Full width of parent container */
-    max-width: 800px; /* Set maximum width */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
-}
-
-.inner-container {
-    display: flex; /* Enable flex layout */
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    width: 90%; /* Adjust width as needed */
-    max-width: 700px; /* Prevent inner content from overflowing */
-    background: rgba(255, 255, 255, 0.2); /* Optional background for inner container */
-    border-radius: 10px; /* Optional rounding */
-    padding: 20px; /* Padding for spacing */
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Optional inner shadow */
-}
-
-.hero {
-    margin-bottom: 30px;
-}
-
-.header {
-    margin-bottom: 10px;
-}
-
-#mainHeader {
-    font-size: 2.8rem;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-#subHeader {
-    font-size: 1.2rem;
-    font-weight: 300;
-    color: #d9ecf2;
-}
-
-.searchBar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-input {
-    flex-grow: 1;
-    padding: 10px 15px;
-    font-size: 1rem;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
-    outline: none;
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    transition: 0.3s;
-}
-
-input::placeholder {
-    color: #d9ecf2;
-    opacity: 0.8;
-}
-
-input:focus {
-    background: rgba(255, 255, 255, 0.3);
-    border-color: #d9ecf2;
-    color: #ffffff;
-}
-
-button {
-    background: #ffffff;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    transition: transform 0.2s, background 0.3s;
-}
-
-button img {
-    width: 24px;
-    height: 24px;
-}
-
-button:hover {
-    background: #d9ecf2;
-    transform: scale(1.1);
-}
-
-button:active {
-    transform: scale(0.9);
-}
-
-/* Card Container */
+/* Cards */
 .card.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;
     padding: 20px 0;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
 }
 
 .cards {
@@ -263,21 +158,20 @@ button:active {
     align-items: center;
     justify-content: center;
     background: rgba(255, 255, 255, 0.2);
-    width: 45%;
+    width: calc(45% - 15px);
+    max-width: 350px;
     height: 150px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    color: #ffffff;
-    font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 15px;
+    animation: popUp 0.5s ease-in-out;
 }
 
 .card-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 }
 
@@ -302,11 +196,9 @@ button:active {
 /* Location Styling */
 #location {
     text-align: center;
-    margin-bottom: 30px; /* Separate the location from the cards */
+    margin-bottom: 30px;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 #city {
@@ -321,6 +213,7 @@ button:active {
     color: #d9ecf2;
 }
 
+/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -332,25 +225,6 @@ button:active {
     }
 }
 
-.container, .card.container {
-    animation: fadeIn 1s ease-in-out;
-}
-
-button {
-    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    background: #b8e5f3; /* Slightly lighter background */
-}
-
-input:focus {
-    box-shadow: 0 0 8px rgba(217, 236, 242, 0.8);
-    transition: box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-
 @keyframes popUp {
     from {
         opacity: 0;
@@ -360,10 +234,6 @@ input:focus {
         opacity: 1;
         transform: scale(1);
     }
-}
-
-.cards {
-    animation: popUp 0.5s ease-in-out;
 }
 
 @keyframes pulse {
@@ -378,26 +248,6 @@ input:focus {
     }
 }
 
-#mainHeader {
-    animation: pulse 2s infinite ease-in-out;
-}
-
-@keyframes bounce {
-    0% {
-        transform: scale(0.9);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.cards.animate {
-    animation: bounce 0.4s ease-in-out;
-}
-
 @keyframes backgroundFlow {
     0% {
         background-position: 0% 50%;
@@ -410,12 +260,119 @@ input:focus {
     }
 }
 
-body {
-    background: linear-gradient(135deg, #89CFF0, #034694);
-    background-size: 400% 400%;
-    animation: backgroundFlow 10s infinite;
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .cards {
+        width: calc(100% - 30px);
+        height: auto;
+    }
+
+    .card.container {
+        justify-content: center;
+    }
 }
 
-#location {
-    animation: fadeIn 1.5s ease-in-out;
+/* Clouds Container */
+.clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Full viewport width */
+    height: 100%; /* Match the height of the hero section */
+    pointer-events: none; /* Ignore mouse events */
+    overflow: hidden;
+    z-index: 1; /* Place clouds below the hero text */
+}
+
+/* Cloud Images */
+.cloud {
+    position: absolute;
+    top: 20%; /* Adjust starting vertical position */
+    width: 300px; /* Increase cloud size */
+    opacity: 0.8; /* Slight transparency for a natural look */
+}
+
+/* Additional Clouds */
+#cloud1 {
+    left: -350px; /* Start off-screen */
+    top: 10%; /* Adjust vertical position */
+    width: 400px; /* Larger cloud */
+    animation-delay: 0s;
+    animation: moveClouds 25s linear infinite;
+}
+
+#cloud2 {
+    left: -500px;
+    top: 30%; /* Centered cloud */
+    width: 450px;
+    animation-delay: 5s;
+    animation: moveCloudsAlternate 25s linear infinite;
+}
+
+#cloud3 {
+    left: -600px;
+    top: 65%; /* Lower cloud */
+    width: 600px; /* Bigger cloud for dramatic effect */
+    animation-delay: 10s;
+    animation: moveClouds 25s linear infinite;
+}
+
+#cloud4 {
+    right: -600px;
+    top: 45%; /* Lower cloud */
+    width: 500px; /* Bigger cloud for dramatic effect */
+    animation-delay: 10s;
+    animation: moveCloudsAlternate 25s linear infinite;
+}
+
+/* Cloud Animation */
+@keyframes moveClouds {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(120vw); /* Move off-screen */
+    }
+}
+
+@keyframes moveCloudsAlternate {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-120vw); /* Move off-screen */
+    }
+}
+
+
+/* Hero Section Adjustments */
+.hero {
+    position: relative; /* Allow clouds to position absolutely */
+    z-index: 2; /* Ensure the text is above the clouds */
+    margin: 0 auto;
+    text-align: center;
+    height: 600px;
+    overflow: hidden; /* Prevent clouds from spilling */
+}
+
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .cloud {
+        width: 200px; /* Smaller clouds for mobile */
+    }
+
+    #cloud1 {
+        top: 5%;
+        width: 250px;
+    }
+
+    #cloud2 {
+        top: 30%;
+        width: 200px;
+    }
+
+    #cloud3 {
+        top: 70%;
+        width: 300px;
+    }
 }

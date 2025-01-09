@@ -139,6 +139,33 @@ body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
+.outer-container {
+    position: relative; /* Establish a relative positioning context */
+    display: flex; /* Use flexbox to manage children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    padding: 20px; /* Optional padding for spacing */
+    background: rgba(255, 255, 255, 0.1); /* Example background */
+    border-radius: 12px; /* Optional rounding */
+    width: 100%; /* Full width of parent container */
+    max-width: 800px; /* Set maximum width */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Optional shadow for style */
+}
+
+.inner-container {
+    display: flex; /* Enable flex layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    width: 90%; /* Adjust width as needed */
+    max-width: 700px; /* Prevent inner content from overflowing */
+    background: rgba(255, 255, 255, 0.2); /* Optional background for inner container */
+    border-radius: 10px; /* Optional rounding */
+    padding: 20px; /* Padding for spacing */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2); /* Optional inner shadow */
+}
+
 .hero {
     margin-bottom: 30px;
 }
